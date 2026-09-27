@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Rhythma as a single focused multilingual landing experience; the phone language picker is the primary interaction and the supporting page stays minimal.
