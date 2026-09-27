@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Globe2, HeartHandshake, MessageCircleHeart } from "lucide-react";
+import { ArrowRight, Check, Globe2, Heart, MessageCircle } from "lucide-react";
 import { useRef, useState } from "react";
 
-import womanIllustration from "@/assets/rhythma-woman.png";
+import heroIllustration from "@/assets/rhythma-hero-cutout.png";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -23,24 +23,10 @@ export const Route = createFileRoute("/")({
 const languages = ["English", "हिंदी", "मराठी", "தமிழ்", "తెలుగు"];
 
 const benefits = [
-  { icon: Globe2, first: "Multiple", second: "Indian Languages" },
-  { icon: MessageCircleHeart, first: "Easy & Natural", second: "Conversations" },
-  { icon: HeartHandshake, first: "Inclusive", second: "for All" },
+  { icon: Globe2, first: "Multiple", second: "Indian Languages", color: "text-primary", background: "bg-lavender-soft" },
+  { icon: MessageCircle, first: "Easy & Natural", second: "Conversations", color: "text-primary", background: "bg-accent" },
+  { icon: Heart, first: "Inclusive", second: "for All", color: "text-pink", background: "bg-pink-soft" },
 ];
-
-function LotusMark({ compact = false }: { compact?: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 64 44"
-      aria-hidden="true"
-      className={compact ? "h-6 w-8" : "h-10 w-14 sm:h-12 sm:w-16"}
-    >
-      <path className="fill-primary/75" d="M32 38C18 31 14 18 22 7c8 6 11 14 10 26 1-13 5-22 13-30 8 13 4 27-8 35Z" />
-      <path className="fill-primary" d="M29 39C16 39 7 33 3 22c13-2 23 3 29 15-5-13-3-24 5-34 7 11 6 24-2 35Z" />
-      <path className="fill-pink/65" d="M34 39c12 0 22-6 27-17-13-2-23 3-29 15Z" />
-    </svg>
-  );
-}
 
 function Index() {
   const [selected, setSelected] = useState("English");
@@ -53,17 +39,18 @@ function Index() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[image:var(--hero-gradient)]">
-      <section className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1440px] grid-cols-1 items-center gap-10 px-6 pb-36 pt-8 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.9fr_1.1fr] min-[900px]:gap-0 min-[900px]:px-16 min-[900px]:pb-32 min-[900px]:pt-0 xl:px-20">
-        <div className="relative z-20 max-w-[650px] min-[900px]:pb-12">
+    <main className="relative min-h-[850px] overflow-hidden bg-[image:var(--hero-gradient)]">
+      <section className="relative z-10 mx-auto grid min-h-[850px] w-full max-w-[1600px] grid-cols-1 items-center gap-8 px-6 pb-36 pt-10 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.92fr_1.08fr] min-[900px]:gap-0 min-[900px]:px-10 min-[900px]:pb-28 min-[900px]:pt-0 xl:px-16">
+        <div className="relative z-20 max-w-[650px] min-[900px]:pb-6">
           <div className="mb-5 flex items-center gap-3 text-primary sm:mb-7">
             <p className="text-xs font-bold uppercase tracking-[0.28em] sm:text-sm">Multilingual Support</p>
           </div>
 
-          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,4vw,5rem)]">
+          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,5vw,5rem)]">
             Same Care,
-            <span className="mt-1 block bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">
-              Every Language
+            <span className="mt-1 flex items-center gap-3">
+              <span className="bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">Every Language</span>
+              <Heart className="h-[0.58em] w-[0.58em] shrink-0 fill-pink text-pink" strokeWidth={1.4} aria-hidden="true" />
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-foreground sm:text-2xl">
@@ -74,9 +61,9 @@ function Index() {
           </p>
 
           <ul className="mt-9 grid grid-cols-3 gap-3 sm:mt-11 sm:max-w-[590px] sm:gap-8" aria-label="Language support benefits">
-            {benefits.map(({ icon: Icon, first, second }) => (
+            {benefits.map(({ icon: Icon, first, second, color, background }) => (
               <li key={first} className="min-w-0 text-center">
-                <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent text-primary shadow-sm sm:h-16 sm:w-16">
+                <span className={cn("mx-auto grid h-14 w-14 place-items-center rounded-full shadow-sm sm:h-16 sm:w-16", background, color)}>
                   <Icon className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.8} aria-hidden="true" />
                 </span>
                 <span className="mt-3 block text-xs font-semibold leading-4 text-foreground sm:text-sm sm:leading-5">
@@ -86,19 +73,19 @@ function Index() {
             ))}
           </ul>
 
-          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full sm:mt-11 sm:w-auto">
+          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full bg-[image:var(--gradient-button)] sm:mt-11 sm:w-auto">
             Explore in Your Language <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </Button>
         </div>
 
-        <div className="relative mx-auto min-h-[600px] w-full max-w-[720px] min-[900px]:min-h-[650px]">
-          <div className="absolute bottom-0 left-[-5%] z-10 w-[72%] animate-gentle-float sm:left-[0%] sm:w-[68%] min-[900px]:left-[-8%] min-[900px]:w-[72%]">
+        <div className="relative mx-auto min-h-[600px] w-full max-w-[780px] min-[900px]:min-h-[650px]">
+          <div className="absolute bottom-0 left-[-2%] z-10 w-[68%] animate-gentle-float sm:left-[2%] sm:w-[64%] min-[900px]:left-[-7%] min-[900px]:w-[60%]">
             <img
-              src={womanIllustration}
+              src={heroIllustration}
               alt="Woman using Rhythma on her phone"
-              width={1024}
-              height={1280}
-              className="h-auto w-full drop-shadow-[0_20px_22px_color-mix(in_oklab,var(--primary)_14%,transparent)]"
+              width={642}
+              height={683}
+              className="h-auto w-full drop-shadow-[0_18px_22px_color-mix(in_oklab,var(--primary)_13%,transparent)]"
             />
           </div>
 
@@ -110,10 +97,6 @@ function Index() {
           >
             <div className="relative flex h-full flex-col overflow-hidden rounded-[2.62rem] border border-primary/25 bg-card px-5 pb-5 pt-11">
               <div className="absolute left-1/2 top-3 h-6 w-24 -translate-x-1/2 rounded-full bg-ink" />
-              <div className="absolute -right-5 top-10 h-32 w-28 rotate-12 opacity-45" aria-hidden="true">
-                <LotusMark />
-              </div>
-
               <div className="relative text-center">
                 <p className="font-display text-3xl font-semibold italic text-ink">Rhythma</p>
                 <h2 className="mt-4 text-base font-semibold leading-snug text-foreground">
