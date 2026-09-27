@@ -79,7 +79,7 @@ function Index() {
         </div>
 
         <div className="relative mx-auto min-h-[600px] w-full max-w-[780px] min-[900px]:min-h-[650px]">
-          <div className="absolute bottom-0 left-[-6%] z-30 w-[62%] animate-gentle-float sm:left-[-4%] min-[900px]:left-[-14%] min-[900px]:w-[72%]">
+          <div className="absolute bottom-0 left-[-6%] z-30 w-[62%] animate-gentle-float sm:left-[-5%] min-[900px]:left-[-16%] min-[900px]:w-[68%]">
             <img
               src={heroIllustration}
               alt="Woman using Rhythma on her phone"
