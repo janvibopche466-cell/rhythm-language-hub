@@ -39,17 +39,18 @@ function Index() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[image:var(--hero-gradient)]">
-      <section className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1600px] grid-cols-1 items-center gap-8 px-6 pb-36 pt-10 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.92fr_1.08fr] min-[900px]:gap-0 min-[900px]:px-10 min-[900px]:pb-28 min-[900px]:pt-0 xl:px-16">
+    <main className="relative min-h-[850px] overflow-hidden bg-[image:var(--hero-gradient)]">
+      <section className="relative z-10 mx-auto grid min-h-[850px] w-full max-w-[1600px] grid-cols-1 items-center gap-8 px-6 pb-36 pt-10 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.92fr_1.08fr] min-[900px]:gap-0 min-[900px]:px-10 min-[900px]:pb-28 min-[900px]:pt-0 xl:px-16">
         <div className="relative z-20 max-w-[650px] min-[900px]:pb-6">
           <div className="mb-5 flex items-center gap-3 text-primary sm:mb-7">
             <p className="text-xs font-bold uppercase tracking-[0.28em] sm:text-sm">Multilingual Support</p>
           </div>
 
-          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,4vw,5rem)]">
+          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,5vw,5rem)]">
             Same Care,
-            <span className="mt-1 flex items-center gap-3 bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">
-              Every Language <Heart className="h-[0.58em] w-[0.58em] shrink-0 fill-pink text-pink" strokeWidth={1.4} aria-hidden="true" />
+            <span className="mt-1 flex items-center gap-3">
+              <span className="bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">Every Language</span>
+              <Heart className="h-[0.58em] w-[0.58em] shrink-0 fill-pink text-pink" strokeWidth={1.4} aria-hidden="true" />
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-foreground sm:text-2xl">
@@ -72,13 +73,13 @@ function Index() {
             ))}
           </ul>
 
-          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full bg-gradient-to-r from-primary to-pink text-primary-foreground sm:mt-11 sm:w-auto">
+          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full sm:mt-11 sm:w-auto">
             Explore in Your Language <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </Button>
         </div>
 
         <div className="relative mx-auto min-h-[600px] w-full max-w-[780px] min-[900px]:min-h-[650px]">
-          <div className="absolute bottom-0 left-[-2%] z-10 w-[68%] animate-gentle-float sm:left-[2%] sm:w-[64%] min-[900px]:left-[-2%] min-[900px]:w-[62%]">
+          <div className="absolute bottom-0 left-[-2%] z-10 w-[68%] animate-gentle-float sm:left-[2%] sm:w-[64%] min-[900px]:left-[-7%] min-[900px]:w-[60%]">
             <img
               src={heroIllustration}
               alt="Woman using Rhythma on her phone"
