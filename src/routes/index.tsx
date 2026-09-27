@@ -73,7 +73,7 @@ function Index() {
             ))}
           </ul>
 
-          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full sm:mt-11 sm:w-auto">
+          <Button size="lg" onClick={exploreLanguages} className="mt-9 w-full bg-[image:var(--gradient-button)] sm:mt-11 sm:w-auto">
             Explore in Your Language <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </Button>
         </div>
