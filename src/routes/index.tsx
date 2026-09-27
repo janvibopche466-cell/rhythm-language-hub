@@ -79,7 +79,7 @@ function Index() {
         </div>
 
         <div className="relative mx-auto min-h-[600px] w-full max-w-[780px] min-[900px]:min-h-[650px]">
-          <div className="absolute bottom-0 left-[-2%] z-10 w-[68%] animate-gentle-float sm:left-[2%] sm:w-[64%] min-[900px]:left-[-7%] min-[900px]:w-[60%]">
+          <div className="absolute bottom-0 left-[-3%] z-30 w-[64%] animate-gentle-float sm:left-[-1%] sm:w-[62%] min-[900px]:left-[-8%] min-[900px]:w-[72%]">
             <img
               src={heroIllustration}
               alt="Woman using Rhythma on her phone"
@@ -92,7 +92,7 @@ function Index() {
           <div
             ref={phoneRef}
             tabIndex={-1}
-            className="animate-phone-rise absolute bottom-0 right-0 z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] min-[900px]:right-[2%]"
+            className="animate-phone-rise absolute bottom-0 right-[-2%] z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] min-[900px]:right-[-6%]"
             aria-label="Rhythma language picker"
           >
             <div className="relative flex h-full flex-col overflow-hidden rounded-[2.62rem] border border-primary/25 bg-card px-5 pb-5 pt-11">
