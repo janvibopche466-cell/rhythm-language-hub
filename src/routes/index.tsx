@@ -92,7 +92,7 @@ function Index() {
           <div
             ref={phoneRef}
             tabIndex={-1}
-            className="animate-phone-rise absolute bottom-0 right-[-6%] z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] min-[900px]:right-[-15%]"
+            className="animate-phone-rise absolute bottom-0 right-[-4%] z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] min-[900px]:right-[-9%]"
             aria-label="Rhythma language picker"
           >
             <div className="relative flex h-full flex-col overflow-hidden rounded-[2.62rem] border border-primary/25 bg-card px-5 pb-5 pt-11">
