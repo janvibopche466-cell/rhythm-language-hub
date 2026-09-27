@@ -92,6 +92,7 @@
   --shadow-phone: 0 30px 70px color-mix(in oklab, var(--primary) 23%, transparent), 0 8px 22px oklch(0.24 0.08 295 / 18%);
   --shadow-button: 0 12px 25px color-mix(in oklab, var(--primary) 28%, transparent);
   --shadow-button-hover: 0 16px 32px color-mix(in oklab, var(--primary) 36%, transparent);
+  --gradient-button: linear-gradient(110deg, oklch(0.46 0.22 299), oklch(0.54 0.23 318));
   --hero-gradient: linear-gradient(112deg, oklch(0.99 0.014 316) 0%, oklch(0.975 0.03 333) 48%, oklch(0.95 0.052 304) 100%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
