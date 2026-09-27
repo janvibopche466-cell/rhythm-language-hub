@@ -12,11 +12,18 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground shadow-[var(--shadow-button)] hover:-translate-y-0.5 hover:bg-primary/92 hover:shadow-[var(--shadow-button-hover)]",
         ghost: "text-foreground hover:bg-accent",
+        outline: "border border-input bg-background text-foreground hover:bg-accent",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-12 px-6 text-sm",
         lg: "h-14 px-8 text-base",
         sm: "h-10 px-5 text-sm",
+        icon: "h-10 w-10 p-0",
+        "icon-sm": "h-8 w-8 p-0",
+        "icon-lg": "h-12 w-12 p-0",
       },
     },
     defaultVariants: {
