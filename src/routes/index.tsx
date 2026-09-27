@@ -54,21 +54,13 @@ function Index() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[image:var(--hero-gradient)]">
-      <header className="relative z-20 mx-auto flex w-full max-w-[1440px] items-center px-6 py-5 sm:px-10 sm:py-7 lg:px-16 xl:px-20">
-        <a href="/" aria-label="Rhythma home" className="inline-flex items-center gap-2 text-ink">
-          <LotusMark />
-          <span className="font-display text-3xl font-semibold italic sm:text-4xl">Rhythma</span>
-        </a>
-      </header>
-
-      <section className="relative z-10 mx-auto grid min-h-[calc(100vh-104px)] w-full max-w-[1440px] grid-cols-1 items-center gap-10 px-6 pb-36 pt-8 sm:px-10 sm:pb-40 lg:grid-cols-[0.9fr_1.1fr] lg:gap-0 lg:px-16 lg:pb-32 lg:pt-0 xl:px-20">
-        <div className="relative z-20 max-w-[650px] lg:pb-12">
+      <section className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1440px] grid-cols-1 items-center gap-10 px-6 pb-36 pt-8 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.9fr_1.1fr] min-[900px]:gap-0 min-[900px]:px-16 min-[900px]:pb-32 min-[900px]:pt-0 xl:px-20">
+        <div className="relative z-20 max-w-[650px] min-[900px]:pb-12">
           <div className="mb-5 flex items-center gap-3 text-primary sm:mb-7">
-            <LotusMark compact />
             <p className="text-xs font-bold uppercase tracking-[0.28em] sm:text-sm">Multilingual Support</p>
           </div>
 
-          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink">
+          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,4vw,5rem)]">
             Same Care,
             <span className="mt-1 block bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">
               Every Language
@@ -99,8 +91,8 @@ function Index() {
           </Button>
         </div>
 
-        <div className="relative mx-auto min-h-[600px] w-full max-w-[720px] lg:min-h-[650px]">
-          <div className="absolute bottom-0 left-[-5%] z-10 w-[72%] animate-gentle-float sm:left-[0%] sm:w-[68%] lg:left-[-8%] lg:w-[72%]">
+        <div className="relative mx-auto min-h-[600px] w-full max-w-[720px] min-[900px]:min-h-[650px]">
+          <div className="absolute bottom-0 left-[-5%] z-10 w-[72%] animate-gentle-float sm:left-[0%] sm:w-[68%] min-[900px]:left-[-8%] min-[900px]:w-[72%]">
             <img
               src={womanIllustration}
               alt="Woman using Rhythma on her phone"
@@ -113,7 +105,7 @@ function Index() {
           <div
             ref={phoneRef}
             tabIndex={-1}
-            className="animate-phone-rise absolute bottom-0 right-0 z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] lg:right-[2%]"
+            className="animate-phone-rise absolute bottom-0 right-0 z-20 h-[570px] w-[286px] rounded-[3rem] bg-ink p-[7px] shadow-[var(--shadow-phone)] outline-none ring-primary focus-visible:ring-4 sm:h-[620px] sm:w-[310px] min-[900px]:right-[2%]"
             aria-label="Rhythma language picker"
           >
             <div className="relative flex h-full flex-col overflow-hidden rounded-[2.62rem] border border-primary/25 bg-card px-5 pb-5 pt-11">
