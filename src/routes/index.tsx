@@ -57,11 +57,10 @@ function Index() {
       <section className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1440px] grid-cols-1 items-center gap-10 px-6 pb-36 pt-8 sm:px-10 sm:pb-40 min-[900px]:grid-cols-[0.9fr_1.1fr] min-[900px]:gap-0 min-[900px]:px-16 min-[900px]:pb-32 min-[900px]:pt-0 xl:px-20">
         <div className="relative z-20 max-w-[650px] min-[900px]:pb-12">
           <div className="mb-5 flex items-center gap-3 text-primary sm:mb-7">
-            <LotusMark compact />
             <p className="text-xs font-bold uppercase tracking-[0.28em] sm:text-sm">Multilingual Support</p>
           </div>
 
-          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink">
+          <h1 className="font-display text-[clamp(3.25rem,6.4vw,6.25rem)] font-medium italic leading-[0.92] text-ink min-[900px]:text-[clamp(2.7rem,4vw,5rem)]">
             Same Care,
             <span className="mt-1 block bg-gradient-to-r from-primary via-pink to-primary bg-clip-text text-transparent">
               Every Language
